@@ -1,5 +1,5 @@
 # Personal Portfolio 🔥
-> https://pante008.github.io/
+> [https://pante008.github.io/](https://pante008.github.io/Ekkta.github.io/)
 
 ## Features 📋
 ⚡️ Fully Responsive\
