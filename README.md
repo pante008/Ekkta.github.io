@@ -7,16 +7,32 @@ A professional portfolio website showcasing the academic journey, technical expe
 ## 🎯 Visual Preview
 
 ### Landing Page
-![Homepage Animation](website_images/HomePage.gif)
+![Homepage](website_images/HomePage.png)
 *Interactive homepage featuring dynamic typing animation showcasing roles: Software Developer, Business Analyst, and Data Enthusiast*
 
 ### About Section
 ![About Section](website_images/AboutPage.png)
 *Comprehensive overview highlighting educational background, interests in technology, business analysis, and software development*
 
+### Education
+![Education Section](website_images/EducationPage.png)
+*Three degrees across continents - MS at Northeastern University (Seattle), Masters at EDHEC Business School (France), BA at University of Delhi (India)*
+
+### Experience
+![Experience Section](website_images/ExperiencePage.png)
+*Professional work history showcasing roles at Genpact, DTN, and ClearStream with detailed accomplishments*
+
 ### Projects Showcase
-![Projects Portfolio](website_images/ProjectPage.png)
-*Featured projects including Library Management System, Image Classification using Deep Learning, and Data Analysis work*
+![Projects Portfolio](website_images/ProjectsPage.png)
+*Featured projects including Library Management System, Concrete Crack Image Classification, House Sales Analysis, and Personal Blog*
+
+### Skills
+![Skills Section](website_images/SkillsPage.png)
+*Technology stack visualization including programming languages, databases, frameworks, and development tools*
+
+### Contact
+![Contact Section](website_images/ContactPage.png)
+*Multiple channels to connect professionally with location, social profiles, and contact information*
 
 ---
 
