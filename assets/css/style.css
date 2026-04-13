@@ -1442,3 +1442,71 @@ h6,
     padding: 10px;
   }
 }
+
+/* Education cards */
+.education-grid {
+  margin-top: 8px;
+}
+
+.education-card {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-logo {
+  width: 100%;
+  height: 64px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 10px;
+  filter: brightness(1.05);
+}
+
+.education-card h4 {
+  color: #eef3ff;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0 4px;
+}
+
+.education-program {
+  color: #d8e2ff;
+  font-size: 0.86rem;
+  margin-bottom: 4px;
+}
+
+.education-meta {
+  color: #9fb0df;
+  font-size: 0.78rem;
+  margin-bottom: 8px;
+}
+
+.education-card ul {
+  margin: 0 0 10px 1rem;
+  padding: 0;
+}
+
+.education-card ul li {
+  color: #cfd9f6;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  margin-bottom: 5px;
+}
+
+.education-link {
+  display: inline-block;
+  margin-top: 4px;
+  margin-right: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #c6b7ff;
+}
+
+.education-link:hover {
+  color: #fff;
+}
