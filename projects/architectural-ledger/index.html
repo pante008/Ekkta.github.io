@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Architectural Ledger | UX Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0d0f14;--card:#141926;--muted:#9aa4bf;--text:#edf1ff;--line:#25304a;--accent:#7c5cff;--ok:#15c47e;--warn:#f7b32b;--bad:#ff5d73}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,system-ui;background:var(--bg);color:var(--text);line-height:1.65}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+    .hero{padding:84px 0 50px;background:radial-gradient(circle at 80% -10%,rgba(124,92,255,.25),transparent 45%)}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.08;margin:.2rem 0 1rem}
+    .eyebrow{color:#c6b9ff;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.74rem}
+    .lead{max-width:760px;color:#d0d8ef}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.9rem}
+    .btn.primary{background:var(--accent);color:#fff}.btn.ghost{border:1px solid var(--line);color:var(--text)}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:24px}
+    .stat{background:var(--card);border:1px solid var(--line);padding:12px;border-radius:12px}
+    .stat strong{font-size:1.35rem;display:block}
+    section{padding:42px 0;border-top:1px solid #1d263d}
+    h2{font-size:1.45rem;margin:0 0 10px}
+    p{margin:0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+    .small{font-size:.9rem;color:var(--muted)}
+    ul{margin:.4rem 0 0 1rem;padding:0}
+    .embeds{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .embed{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .embed iframe{display:block;width:100%;height:420px;border:0}
+    .embed .cap{padding:10px 12px;font-size:.84rem;color:#d2daf2}
+    .node-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+    .node-links a{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:#d8def3;text-decoration:none;font-size:.86rem}
+    .node-links a:hover{border-color:#4e5f93;color:#fff}
+    .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+    .q p{font-style:italic;color:#d5dcf3}
+    .q .by{margin-top:8px;font-size:.8rem;color:var(--muted)}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .m{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+    .m .n{font-size:1.6rem;font-weight:800}.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+    .foot{padding:28px 0 48px}.foot a{color:#c5b8ff}
+    @media (max-width:900px){.stats,.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.quotes{grid-template-columns:1fr}.grid-2,.embeds,.node-links{grid-template-columns:1fr}}
+    @media (max-width:560px){.stats,.metrics{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">UX Case Study · Northeastern University · 2026</div>
+      <h1>The Architectural Ledger</h1>
+      <p class="lead">An AI-assisted operations dashboard that reduces incident handling from 40+ minutes to under 10 minutes by guiding users from alert to investigation, corrective action, reporting, and sharing in one mobile workflow.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App" target="_blank" rel="noopener">Figma Prototype ↗</a>
+        <a class="btn ghost" href="https://stitch.withgoogle.com/preview/2995770284776790837?node-id=a1e3a008c7b24475b1e7a98e392e6609" target="_blank" rel="noopener">Stitch Prototype ↗</a>
+        <a class="btn ghost" href="../../index.html#portfolio">← Back to Portfolio</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>100%</strong><span class="small">Task success</span></div>
+        <div class="stat"><strong>8.89 / 10</strong><span class="small">Usability score</span></div>
+        <div class="stat"><strong>4.72 / 5</strong><span class="small">Avg satisfaction</span></div>
+        <div class="stat"><strong>5</strong><span class="small">Participants</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h2>Project Summary & Objective</h2>
+        <p class="small">Problem statement</p>
+        <p>Operations teams were switching across 3–5 tools per incident, causing context loss, delay, and low trust in AI alerts. The objective was a single explainable UX flow that supports faster and more confident decisions.</p>
+      </div>
+      <div class="card">
+        <h2>User Research & Insights</h2>
+        <ul>
+          <li>5 moderated interviews across operations, finance, and engineering roles</li>
+          <li>Recurring pain: slow validation and poor handoff continuity</li>
+          <li>Trust gap: users wanted confidence scores plus evidence visibility</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h2>Design Approach & Usability Testing</h2>
+        <ul>
+          <li>Research synthesis → task flow mapping → low-fi wireframing</li>
+          <li>23 high-fidelity Figma screens across 5 key tasks</li>
+          <li>5 moderated usability sessions (think-aloud), transcript + timing capture</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Solution Overview / Demo</h2>
+        <p>Final solution includes alert detection, guided root-cause analysis, ticket creation, report generation with review, and one-tap sharing to collaboration tools.</p>
+        <p class="small" style="margin-top:10px">This page now prioritizes live prototype access over static screenshots for a more professional presentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Interactive Prototype & Screen References</h2>
+      <p class="small" style="margin-bottom:12px">Live embeds and direct links to the exact Figma nodes used in testing and redesign decisions.</p>
+      <div class="embeds">
+        <div class="embed">
+          <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App" allowfullscreen loading="lazy"></iframe>
+          <div class="cap">Live Figma prototype embed</div>
+        </div>
+        <div class="embed">
+          <iframe src="https://stitch.withgoogle.com/preview/2995770284776790837?node-id=a1e3a008c7b24475b1e7a98e392e6609" loading="lazy"></iframe>
+          <div class="cap">Final Stitch prototype preview (if blocked in-frame, open via top button)</div>
+        </div>
+      </div>
+      <div class="node-links">
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-149" target="_blank" rel="noopener">Dashboard · node 277-149</a>
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-660" target="_blank" rel="noopener">Alert Modal · node 277-660</a>
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-2193" target="_blank" rel="noopener">Investigation Guide · node 277-2193</a>
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-2252" target="_blank" rel="noopener">Recommended Actions · node 277-2252</a>
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-1089" target="_blank" rel="noopener">Create Ticket · node 277-1089</a>
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-2464" target="_blank" rel="noopener">Ticket Success · node 277-2464</a>
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-1411" target="_blank" rel="noopener">Share Findings · node 277-1411</a>
+        <a href="https://www.figma.com/design/iYNqMMsbTfTA4kZT63NQbU/AI-Assitsted-Ops-App?node-id=277-1756" target="_blank" rel="noopener">Generate Report · node 277-1756</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Usability Insights (Feedback Snippets + Impact)</h2>
+      <div class="quotes">
+        <div class="q"><p>“We jumped from step 2 to step 5.”</p><div class="by">Impact: enforced step-by-step progression with clear step counter.</div></div>
+        <div class="q"><p>“I couldn’t confirm sharing finished.”</p><div class="by">Impact: added explicit post-share success confirmation screen.</div></div>
+        <div class="q"><p>“Preview made me trust what gets sent.”</p><div class="by">Impact: split report flow into Generate → Preview → Send.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Outcome & Impact</h2>
+      <div class="metrics">
+        <div class="m"><div class="n ok">100%</div><div class="small">Task completion (25/25)</div></div>
+        <div class="m"><div class="n ok">4.72 / 5</div><div class="small">Average satisfaction</div></div>
+        <div class="m"><div class="n bad">3.80 / 5</div><div class="small">Lowest metric: AI trust</div></div>
+        <div class="m"><div class="n warn">0.28</div><div class="small">Avg errors per task</div></div>
+      </div>
+      <p class="small" style="margin-top:10px">Quantitative findings and chart-ready data were generated from session logs and AI-assisted analysis.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h2>AI Tools Used Throughout</h2>
+        <ul>
+          <li>Looppanel: interview synthesis and thematic clustering</li>
+          <li>Stitch AI: low-fi/hi-fi iteration support</li>
+          <li>Claude + Figma MCP: heuristic checks and cross-screen consistency</li>
+          <li>Otter.ai: transcript extraction for evidence-backed redesigns</li>
+          <li>ChatGPT/Julius: scoring logic and visual analytics support</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Key Takeaways & Design Improvements</h2>
+        <ul>
+          <li>Explainability drives AI trust more than speed alone</li>
+          <li>Mandatory confirmation states prevent workflow ambiguity</li>
+          <li>Mixed-method evaluation (qual + quant) catches critical blind spots</li>
+          <li>Next iteration: confidence formula transparency and richer evidence traces</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap small">Created as a dedicated case-study webpage for course deliverable · <a href="../../index.html#portfolio">Return to portfolio projects</a></div>
+  </footer>
+</body>
+</html>
