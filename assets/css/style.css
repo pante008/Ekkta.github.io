@@ -1096,3 +1096,210 @@ section .container {
     transform: translateX(-50%);
   }
 }
+
+/*--------------------------------------------------------------
+# Modern Portfolio Refresh (non-breaking overrides)
+--------------------------------------------------------------*/
+:root {
+  --accent: #7c5cff;
+  --accent-2: #12d640;
+  --bg-1: #060b16;
+  --bg-2: #0b1222;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+}
+
+body {
+  color: #edf2ff;
+  font-family: "Open Sans", sans-serif;
+}
+
+body::before {
+  background:
+    radial-gradient(900px 400px at 85% -5%, rgba(124, 92, 255, 0.24), transparent 70%),
+    radial-gradient(700px 350px at 0% 15%, rgba(18, 214, 64, 0.14), transparent 65%),
+    linear-gradient(165deg, var(--bg-1) 0%, var(--bg-2) 100%);
+}
+
+a,
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+  color: #c6d2ff;
+}
+
+#header .container {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  padding: 28px 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 70px rgba(3, 8, 20, 0.5);
+}
+
+#header h1 {
+  font-size: 54px;
+  letter-spacing: -0.02em;
+}
+
+#header h2 {
+  color: #d9e2ff !important;
+  font-size: 22px;
+}
+
+#header h2 span {
+  color: #9ec5ff !important;
+  border-bottom: 2px solid rgba(124, 92, 255, 0.6);
+}
+
+.nav-menu {
+  margin-top: 24px;
+}
+
+.nav-menu ul {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-menu li + li {
+  margin-left: 0;
+}
+
+.nav-menu a {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+}
+
+.nav-menu a:before {
+  display: none;
+}
+
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+  border-color: rgba(124, 92, 255, 0.5);
+  background: rgba(124, 92, 255, 0.16);
+  color: #fff;
+}
+
+#header .social-links a {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#header .social-links a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+#header.header-top {
+  background: rgba(6, 11, 22, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+section .container {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.25);
+}
+
+.section-title h2 {
+  color: #d7e0ff;
+  letter-spacing: 0.16em;
+}
+
+.section-title h2::after {
+  background: linear-gradient(90deg, rgba(124, 92, 255, 0.1), rgba(124, 92, 255, 0.8), rgba(18, 214, 64, 0.6));
+}
+
+.about-me .content p,
+.about-me .content li {
+  color: #cdd7f4;
+}
+
+.interests .icon-box,
+.services .icon-box,
+.contact .info-box {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+}
+
+.interests .icon-box:hover,
+.services .icon-box:hover {
+  border-color: rgba(124, 92, 255, 0.55);
+  transform: translateY(-3px);
+}
+
+.portfolio #portfolio-flters li {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: #d3dcf7;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  background: rgba(124, 92, 255, 0.22);
+  border-color: rgba(124, 92, 255, 0.55);
+  color: #fff;
+}
+
+.portfolio .portfolio-wrap {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 28px rgba(3, 10, 22, 0.35);
+  overflow: hidden;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: transform 0.35s ease;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  background: rgba(124, 92, 255, 0.9);
+  border-radius: 10px;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  background: #5f43e8;
+}
+
+.portfolio-item h4 {
+  color: #f0f4ff;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contact .info-box i.bx {
+  background: rgba(124, 92, 255, 0.2);
+  color: #d3c8ff;
+}
+
+.contact .info-box h3,
+.contact .info-box p {
+  color: #dce4ff;
+}
+
+@media (max-width: 992px) {
+  #header .container {
+    padding: 20px;
+  }
+
+  .nav-menu ul {
+    justify-content: center;
+  }
+}
