@@ -1303,3 +1303,142 @@ section .container {
     justify-content: center;
   }
 }
+
+/* Additional polish */
+body,
+p,
+li,
+a,
+span {
+  font-family: "Inter", "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title h2 {
+  font-family: "Manrope", "Poppins", sans-serif;
+}
+
+#header h1 {
+  font-weight: 800;
+}
+
+.section-title h2 {
+  background: rgba(124, 92, 255, 0.12);
+  border: 1px solid rgba(124, 92, 255, 0.35);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.about-me img.img-fluid {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.about-subtitle {
+  color: #e6ecff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  letter-spacing: 0.01em;
+}
+
+.about-skills-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.about-skill {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #dce4ff;
+  background: rgba(124, 92, 255, 0.14);
+  border: 1px solid rgba(124, 92, 255, 0.35);
+}
+
+.about-contact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.about-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #dce4ff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about-contact-item i {
+  color: #a6b7ff;
+  font-size: 16px;
+}
+
+.about-contact-item a {
+  color: #dce4ff;
+}
+
+.about-contact-item a:hover {
+  color: #fff;
+}
+
+.services .icon-box,
+.interests .icon-box,
+.portfolio .portfolio-wrap,
+.contact .info-box {
+  transition: all 0.25s ease;
+}
+
+.services .icon-box:hover,
+.interests .icon-box:hover,
+.contact .info-box:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .about-contact-strip {
+    padding: 10px;
+  }
+
+  .about-contact-item {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .about-skills-strip {
+    padding: 10px;
+  }
+}

@@ -23,6 +23,13 @@
   
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+      .lms-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+      .lms-shot{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden}
+      .lms-shot img{display:block;width:100%;height:180px;object-fit:cover;object-position:center}
+      .lms-shot p{margin:0;padding:8px 10px;font-size:.78rem;color:#dfe5ff}
+      @media(max-width:768px){.lms-gallery{grid-template-columns:1fr}.lms-shot img{height:200px}}
+    </style>
   
     <!-- =======================================================
     * Template Name: Personal - v2.2.0
@@ -55,6 +62,25 @@
                 <p>
                 Tested the scalability of application by generating 10000 user requests with the help of JUnit test cases
                 </p>
+
+                <div class="lms-gallery">
+                  <div class="lms-shot">
+                    <img src="../assets/img/project/library.png" alt="Library Management System overview">
+                    <p>library.png · Project overview</p>
+                  </div>
+                  <div class="lms-shot">
+                    <img src="../assets/img/project/lib1.png" alt="Library module screen 1">
+                    <p>lib1.png · Module screen 1</p>
+                  </div>
+                  <div class="lms-shot">
+                    <img src="../assets/img/project/lib2.png" alt="Library module screen 2">
+                    <p>lib2.png · Module screen 2</p>
+                  </div>
+                  <div class="lms-shot">
+                    <img src="../assets/img/project/lib3.png" alt="Library module screen 3">
+                    <p>lib3.png · Module screen 3</p>
+                  </div>
+                </div>
             </div>
   
           </div>
