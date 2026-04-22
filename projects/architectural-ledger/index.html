@@ -102,6 +102,8 @@ h1 em{font-style:italic;color:var(--pl)}
 .bat{padding:.45rem .8rem;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .bac.before .bat{background:rgba(244,63,94,.1);color:var(--cr)}
 .bac.after .bat{background:rgba(16,185,129,.1);color:var(--gd)}
+.bai{height:230px;background:#0f1420;padding:.5rem}
+.bai img{width:100%;height:100%;object-fit:contain;border-radius:8px}
 .bab{padding:1rem;background:var(--night2)}
 .bab h4{font-size:.85rem;margin-bottom:.3rem}
 .bab p{font-size:.79rem;color:var(--body);line-height:1.6}
@@ -257,7 +259,7 @@ footer p{color:rgba(255,255,255,.55)}
 
 @keyframes drift{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(3%,2%,0)}}
 
-@media(max-width:980px){.emb,.grid2,.tw,.qg,.bap,.cg{grid-template-columns:1fr}.pro{grid-template-columns:repeat(2,1fr)}.ag,.sgr{grid-template-columns:1fr 1fr}.mg,.sk{grid-template-columns:1fr 1fr}.nlk{grid-template-columns:1fr}.sb{grid-template-columns:1fr}}
+@media(max-width:980px){.emb,.grid2,.qg,.bap,.cg{grid-template-columns:1fr}.pro{grid-template-columns:repeat(2,1fr)}.ag,.sgr,.tw{grid-template-columns:1fr 1fr}.mg,.sk{grid-template-columns:1fr 1fr}.nlk{grid-template-columns:1fr}.sb{grid-template-columns:1fr}}
 @media(max-width:640px){.nm{display:none}.ag,.mg,.pro,.sgr,.sk{grid-template-columns:1fr}section{padding:4rem 0}}
 </style>
 </head>
@@ -751,19 +753,20 @@ footer p{color:rgba(255,255,255,.55)}
     <h2 class="st">6 AI tools · every phase · ~20 hours of workflow accelerated</h2>
     <p class="ss">End-to-end experiment in AI-assisted UX. Each tool served a specific, deliberate role — AI accelerated without replacing critical design judgment.</p>
 
-    <div class="ac"><div class="ap">Research Phase</div><div class="an">Looppanel</div><div class="au">Auto-coded 5 interview transcripts into themes, pain points, and user needs. Generated persona inputs and affinity cluster summaries from observational research.</div><div class="ai2">Cut 8+ hrs of qualitative coding to ~45 min. Surfaced "context-switching" as the dominant theme across all 5 users.</div></div>
-    <div style="margin:1rem 0 1.4rem;text-align:center"><img src="../../website_images/looppanel.png" alt="Looppanel analysis output" style="border-radius:12px;border:1px solid var(--bd);max-width:100%;height:auto;max-height:280px"></div>
-    <div class="ac"><div class="ap">Lo-Fi Prototype (Phase 2)</div><div class="an">Stitch AI</div><div class="au">5-screen wireframe flow generated from Master Prompt design system. Used for 2 cognitive walkthrough sessions to validate information architecture. Informed 5 iteration cycles before hi-fi investment.</div><div class="ai2">Low-fi validation reduced rework risk before high-fidelity production.</div></div>
-    <div class="ac"><div class="ap">Hi-Fi Prototype (Phase 3)</div><div class="an">Stitch AI</div><div class="au">Screen-by-screen generation for all 23 hi-fi screens using Master Prompt design system and per-screen detail prompts. 8 redesign iteration cycles after heuristic evaluation feedback.</div><div class="ai2">Prompt precision and structured iteration improved consistency across the full flow.</div></div>
-    <div style="margin:1rem 0 1.4rem;text-align:center"><img src="../../website_images/Stich.png" alt="Google Stitch prototype screens" style="border-radius:12px;border:1px solid var(--bd);max-width:100%;height:auto;max-height:320px"></div>
-    <div class="ac"><div class="ap">Google Stitch Section</div><div class="an">Google Stitch — Interactive Prototype</div><div class="au">Google Stitch was used to rapidly generate and iterate interaction flows before final Figma refinement. It helped validate sequence, state transitions, and prompt-driven UI variants early in the design cycle.</div><div class="ai2">Open the latest Stitch preview: <a href="https://stitch.withgoogle.com/preview/2995770284776790837?node-id=e0bd25f944e54c0d9bce705a5f54784f" target="_blank" style="color:var(--pl)">Google Stitch Prototype ↗</a></div></div>
-    <div class="ac"><div class="ap">Evaluation (Phase 3)</div><div class="an">Claude + Figma MCP + Self-Assessment</div><div class="au">AI review found cross-screen consistency issues quickly; self-assessment caught interaction-level issues under task pressure.</div><div class="ai2">Combined output: 14 issues total (9 AI-detected consistency issues, 5 self-assessment interaction risks).</div></div>
-    <div class="ac"><div class="ap">Usability Testing (Phase 4)</div><div class="an">Otter.ai + ChatGPT</div><div class="au">Otter.ai transcribed 5 Zoom sessions and extracted quote-level evidence. ChatGPT supported real-time metric structure and requirement gap checks.</div><div class="ai2">Results consolidated into score, outlier analysis, and redesign prioritization.</div></div>
-    <div style="margin:1.5rem 0;text-align:center"><img src="../../website_images/otterai.png" alt="Otter.ai transcript analysis" style="border-radius:12px;border:1px solid var(--bd);max-width:100%;height:auto;max-height:280px"></div>
-    <div class="ac"><div class="ap">Data Visualization</div><div class="an">Julius AI</div><div class="au">Generated 4 publication-quality charts from usability data: task time comparison, satisfaction by category, error distribution, and usability score breakdown.</div><div class="ai2">Reduced chart production from about 2 hours to about 15 minutes per chart set.</div></div>
-    <div style="margin:2rem 0 1.5rem">
+    <div class="ag" style="margin-top:1.2rem">
+      <div class="ac"><div class="ap">Research Phase</div><div class="an">Looppanel</div><div class="au">Auto-coded 5 interview transcripts into themes, pain points, and user needs. Generated persona inputs and affinity cluster summaries from observational research.</div><div class="ai2">Cut 8+ hrs of qualitative coding to ~45 min. Surfaced "context-switching" as the dominant theme across all 5 users.</div></div>
+      <div class="ac"><div class="ap">Prototype Design (Lo-Fi + Hi-Fi)</div><div class="an">Stitch AI</div><div class="au">Used a master prompt system for early wireframes and final 23-screen high-fidelity generation. Supported rapid iteration after heuristic feedback while preserving flow consistency.</div><div class="ai2">Interactive preview: <a href="https://stitch.withgoogle.com/preview/2995770284776790837?node-id=e0bd25f944e54c0d9bce705a5f54784f" target="_blank" style="color:var(--pl)">Google Stitch Prototype ↗</a></div></div>
+      <div class="ac"><div class="ap">Evaluation (Phase 3)</div><div class="an">Claude + Figma MCP + Self-Assessment</div><div class="au">AI review found cross-screen consistency issues quickly; self-assessment caught interaction-level issues under task pressure.</div><div class="ai2">Combined output: 14 issues total (9 AI-detected consistency issues, 5 self-assessment interaction risks).</div></div>
+      <div class="ac"><div class="ap">Usability Testing (Phase 4)</div><div class="an">Otter.ai + ChatGPT</div><div class="au">Otter.ai transcribed 5 Zoom sessions and extracted quote-level evidence. ChatGPT supported real-time metric structure and requirement gap checks.</div><div class="ai2">Results consolidated into score, outlier analysis, and redesign prioritization.</div></div>
+      <div class="ac"><div class="ap">Data Visualization</div><div class="an">Julius AI</div><div class="au">Generated 4 publication-quality charts from usability data: task time comparison, satisfaction by category, error distribution, and usability score breakdown.</div><div class="ai2">Reduced chart production from about 2 hours to about 15 minutes per chart set.</div></div>
+    </div>
+
+    <div style="margin:1.2rem auto 1.4rem;max-width:860px;text-align:center"><img src="../../website_images/looppanel.png" alt="Looppanel analysis output" style="border-radius:12px;border:1px solid var(--bd);max-width:100%;height:auto;max-height:250px"></div>
+    <div style="margin:1rem auto 1.4rem;max-width:920px;text-align:center"><img src="../../website_images/Stich.png" alt="Google Stitch prototype screens" style="border-radius:12px;border:1px solid var(--bd);max-width:100%;height:auto;max-height:280px"></div>
+    <div style="margin:1.3rem auto 1.6rem;max-width:860px;text-align:center"><img src="../../website_images/otterai.png" alt="Otter.ai transcript analysis" style="border-radius:12px;border:1px solid var(--bd);max-width:100%;height:auto;max-height:250px"></div>
+    <div style="margin:2rem auto 1.5rem;max-width:980px;padding:0 .6rem">
       <h5 style="font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;text-align:center">Generated Charts — Julius AI</h5>
-      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem">
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;padding:0 .25rem">
         <img src="../../website_images/avgtask.png" alt="Average Task Time Comparison" style="border-radius:12px;border:1px solid var(--bd);width:100%;height:auto">
         <img src="../../website_images/errordistribution.png" alt="Error Distribution Chart" style="border-radius:12px;border:1px solid var(--bd);width:100%;height:auto">
         <img src="../../website_images/satisfaction.png" alt="Satisfaction by Category" style="border-radius:12px;border:1px solid var(--bd);width:100%;height:auto">
@@ -781,14 +784,16 @@ footer p{color:rgba(255,255,255,.55)}
   <div class="c"><div class="m">
     <p class="sl">09 — Skills Demonstrated</p>
     <h2 class="st">End-to-end UX practice across research, design & validation</h2>
-    <div class="skc"><div class="ski">🔍</div><div class="skn">User Research</div><div class="skd">Moderated interviews, observational sessions, Looppanel AI synthesis, persona development, journey mapping.</div></div>
-    <div class="skc"><div class="ski">📋</div><div class="skn">Requirements Definition</div><div class="skd">55 functional + 42 UI requirements, full traceability from user need to PRD to prototype screen.</div></div>
-    <div class="skc"><div class="ski">✏️</div><div class="skn">Wireframing & Prototyping</div><div class="skd">Lo-fi in Stitch AI, hi-fi in Figma, mobile-first design, 23 screens across 5 tasks.</div></div>
-    <div class="skc"><div class="ski">🎨</div><div class="skn">Visual & Interaction Design</div><div class="skd">Design system with color tokens, Slack-inspired palette, and consistent component library.</div></div>
-    <div class="skc"><div class="ski">🔬</div><div class="skn">Heuristic Evaluation</div><div class="skd">Nielsen's 10 heuristics, 14 issues (P0-P3), AI-assisted full-prototype evaluation via Figma MCP.</div></div>
-    <div class="skc"><div class="ski">🧪</div><div class="skn">Summative Usability Testing</div><div class="skd">5 moderated remote sessions, think-aloud protocol, quantitative scoring, and outlier analysis.</div></div>
-    <div class="skc"><div class="ski">📊</div><div class="skn">Quantitative UX Analysis</div><div class="skd">Weighted usability scoring, task metrics, Likert scales, and UX requirement compliance tracking.</div></div>
-    <div class="skc"><div class="ski">🤖</div><div class="skn">AI-Augmented Design</div><div class="skd">6 AI tools across full lifecycle: research, prototyping, evaluation, testing, and visualization.</div></div>
+    <div class="sk" style="margin-top:1.2rem">
+      <div class="skc"><div class="ski">🔍</div><div class="skn">User Research</div><div class="skd">Moderated interviews, observational sessions, Looppanel AI synthesis, persona development, journey mapping.</div></div>
+      <div class="skc"><div class="ski">📋</div><div class="skn">Requirements Definition</div><div class="skd">55 functional + 42 UI requirements, full traceability from user need to PRD to prototype screen.</div></div>
+      <div class="skc"><div class="ski">✏️</div><div class="skn">Wireframing & Prototyping</div><div class="skd">Lo-fi in Stitch AI, hi-fi in Figma, mobile-first design, 23 screens across 5 tasks.</div></div>
+      <div class="skc"><div class="ski">🎨</div><div class="skn">Visual & Interaction Design</div><div class="skd">Design system with color tokens, Slack-inspired palette, and consistent component library.</div></div>
+      <div class="skc"><div class="ski">🔬</div><div class="skn">Heuristic Evaluation</div><div class="skd">Nielsen's 10 heuristics, 14 issues (P0-P3), AI-assisted full-prototype evaluation via Figma MCP.</div></div>
+      <div class="skc"><div class="ski">🧪</div><div class="skn">Summative Usability Testing</div><div class="skd">5 moderated remote sessions, think-aloud protocol, quantitative scoring, and outlier analysis.</div></div>
+      <div class="skc"><div class="ski">📊</div><div class="skn">Quantitative UX Analysis</div><div class="skd">Weighted usability scoring, task metrics, Likert scales, and UX requirement compliance tracking.</div></div>
+      <div class="skc"><div class="ski">🤖</div><div class="skn">AI-Augmented Design</div><div class="skd">6 AI tools across full lifecycle: research, prototyping, evaluation, testing, and visualization.</div></div>
+    </div>
   </div></div>
 </section>
 
@@ -796,11 +801,13 @@ footer p{color:rgba(255,255,255,.55)}
   <div class="c"><div class="m">
     <p class="sl">10 — Key Takeaways & Next Improvements</p>
     <h2 class="st">What designing an AI product with AI tools taught me</h2>
-    <div class="tc"><h4>AI evaluation + self-assessment are complementary</h4><p>AI caught cross-screen consistency bugs in minutes, while self-assessment exposed interaction consequences AI could not predict. Together they produced the complete 14-issue picture.</p></div>
-    <div class="tc"><h4>Transparency is the prerequisite for AI trust</h4><p>AI trust satisfaction was the lowest score (3.80/5). Users asked for confidence logic and source visibility to trust recommendations.</p></div>
-    <div class="tc"><h4>One outlier can point to the highest-impact fix</h4><p>P4's 13.5-minute Task 4 outlier exposed a missing post-sharing confirmation state and directly drove redesign U-07.</p></div>
-    <div class="tc"><h4>The PRD is the operational north star</h4><p>Both "Not Met" requirements were in the PRD from day one and only surfaced under real usability-test pressure.</p></div>
-    <div class="tc"><h4>Prompt quality shapes output quality</h4><p>Vague prompts produced generic screens; prompt sets with screen IDs, explicit states, and PRD constraints produced production-quality outcomes.</p></div>
+    <div class="tw" style="margin-top:1.2rem">
+      <div class="tc"><h4>AI evaluation + self-assessment are complementary</h4><p>AI caught cross-screen consistency bugs in minutes, while self-assessment exposed interaction consequences AI could not predict. Together they produced the complete 14-issue picture.</p></div>
+      <div class="tc"><h4>Transparency is the prerequisite for AI trust</h4><p>AI trust satisfaction was the lowest score (3.80/5). Users asked for confidence logic and source visibility to trust recommendations.</p></div>
+      <div class="tc"><h4>One outlier can point to the highest-impact fix</h4><p>P4's 13.5-minute Task 4 outlier exposed a missing post-sharing confirmation state and directly drove redesign U-07.</p></div>
+      <div class="tc"><h4>The PRD is the operational north star</h4><p>Both "Not Met" requirements were in the PRD from day one and only surfaced under real usability-test pressure.</p></div>
+      <div class="tc"><h4>Prompt quality shapes output quality</h4><p>Vague prompts produced generic screens; prompt sets with screen IDs, explicit states, and PRD constraints produced production-quality outcomes.</p></div>
+    </div>
   </div></div>
 </section>
 
