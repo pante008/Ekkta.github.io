@@ -447,21 +447,233 @@ footer p{color:rgba(255,255,255,.55)}
 </section>
 
         <p class="sl">05 — Design Decisions (Before / After)</p>
-        <h2 class="st">Before & after — issues found, evidence gathered, redesigned</h2>
-        <p class="ss">Issues surfaced by Claude + Figma MCP heuristic evaluation and confirmed in live usability sessions. Each became a Stitch AI redesign prompt.</p>
-    <p class="sl">05 — Design Decisions (Before / After)</p>
-          <div class="bac before"><div class="bat">Before — H-09 · P0 Critical · Broken Dropdown</div><div class="bab"><h4>Priority dropdown broken ("e igh")</h4><p>Critical ticket field rendered incorrectly due to overflow and introduced ambiguity in action severity selection.</p></div></div>
-          <div class="bac after"><div class="bat">After — Priority pill selector</div><div class="bab"><h4>Critical / High / Medium / Low chips</h4><p>Replaced dropdown with explicit pills, defaulted from alert severity, and improved speed + confidence.</p></div></div>
-      <div class="bac before"><div class="bat">Before — H-09 · P0</div><div class="bab"><h4>Priority dropdown broken ("e igh")</h4><p>Critical ticket field rendered incorrectly due to overflow and introduced ambiguity in action severity selection.</p></div></div>
-      <div class="bac after"><div class="bat">After — Priority pill selector</div><div class="bab"><h4>Critical / High / Medium / Low chips</h4><p>Replaced dropdown with explicit pills, defaulted from alert severity, and improved speed + confidence.</p></div></div>
-          <div class="bac before"><div class="bat">Before — H-12 · P1 High · Report Flow</div><div class="bab"><h4>Generate & Send in one click</h4><p>No enforced review step; violated error-prevention heuristic for AI-generated report content.</p></div></div>
-          <div class="bac after"><div class="bat">After — 3-step report flow</div><div class="bab"><h4>Generate → Preview → Send</h4><p>Introduced mandatory preview and clearer helper text. Preview step scored 5/5 satisfaction in testing.</p></div></div>
-      <div class="bac before"><div class="bat">Before — H-12 · P1</div><div class="bab"><h4>Generate & Send in one click</h4><p>No enforced review step; violated error-prevention heuristic for AI-generated report content.</p></div></div>
-      <div class="bac after"><div class="bat">After — 3-step report flow</div><div class="bab"><h4>Generate → Preview → Send</h4><p>Introduced mandatory preview and clearer helper text. Preview step scored 5/5 satisfaction in testing.</p></div></div>
-          <div class="bac before"><div class="bat">Before — U-03 · Testing Found · Root Cause Hidden</div><div class="bab"><h4>Root cause buried after confidence score</h4><p>Users jumped from confidence indicator to interventions and missed causality context.</p></div></div>
-          <div class="bac after"><div class="bat">After — Mandatory Step 3</div><div class="bab"><h4>Root Cause surfaced in guided flow</h4><p>Promoted causality to a required step with stronger hierarchy and reduced confusion during investigation.</p></div></div>
-      <div class="bac before"><div class="bat">Before — U-03</div><div class="bab"><h4>Root cause buried after confidence score</h4><p>Users jumped from confidence indicator to interventions and missed causality context.</p></div></div>
-      <div class="bac after"><div class="bat">After — Mandatory Step 3</div><div class="bab"><h4>Root Cause surfaced in guided flow</h4><p>Promoted causality to a required step with stronger hierarchy and reduced confusion during investigation.</p></div></div>
+        <h2 class="st">14 heuristic evaluation issues identified (9 AI-assisted, 5 self-assessment)</h2>
+        <p class="ss">Each became a Stitch AI redesign prompt. Below: all 13 redesigns with visual evidence.</p>
+        <p class="ss" style="margin-top:1rem"><strong>Key insight:</strong> AI vs self-assessment was complementary. AI-assisted evaluation caught cross-screen consistency bugs impossible to spot manually. Self-assessment caught interaction-level risks only visible under simulated task pressure. Neither method alone captured the full 14-issue picture.</p>
+        <div class="tw" style="grid-template-columns:1fr;gap:1.2rem;margin-top:2rem">
+          <div class="tc">
+            <div class="th"><div class="tn">1</div><h4>H-01 · P2 Medium · KPI Variance Labels (Task 1)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H01Before.png" alt="H-01 before KPI variance labels" loading="lazy"></div>
+                <div class="bab"><h4>Status indicators only</h4><p>No magnitude shown — users had to tap each card to see how far below target.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H01After.png" alt="H-01 after KPI variance labels" loading="lazy"></div>
+                <div class="bab"><h4>Inline variance labels</h4><p>Added labels like “-10% vs target” in red so critical context surfaces instantly without drill-down.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">2</div><h4>H-02 · P3 Low · Mode Preview Thumbnails (Task 1)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H02B.png" alt="H-02 before mode preview thumbnails" loading="lazy"></div>
+                <div class="bab"><h4>Radio buttons only</h4><p>Users had to select a mode, observe, then return if the layout was wrong.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H02After.png" alt="H-02 after mode preview thumbnails" loading="lazy"></div>
+                <div class="bab"><h4>Side-by-side thumbnails</h4><p>Basic and Advanced layouts are visible up front, reducing mode uncertainty.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">3</div><h4>H-03 · P2 Medium · Metric Glossary Code Bug (Task 1)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H03Before.png" alt="H-03 before metric glossary code bug" loading="lazy"></div>
+                <div class="bab"><h4>Truncated metric codes</h4><p>Codes rendered as broken strings (“Ur D” instead of “CUST_ACQ”).</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H03After.png" alt="H-03 after metric glossary code bug" loading="lazy"></div>
+                <div class="bab"><h4>Overflow fixed</h4><p>Text layer bindings corrected; codes now display fully with ellipsis fallback.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">4</div><h4>H-04 · P1 Critical · Dismiss Alert Confirmation (Task 1)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H04Before.png" alt="H-04 before dismiss alert confirmation" loading="lazy"></div>
+                <div class="bab"><h4>Equal button weight</h4><p>Dismiss and Investigate looked equally important. Accidental taps had no confirmation or undo.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H04After.png" alt="H-04 after dismiss alert confirmation" loading="lazy"></div>
+                <div class="bab"><h4>Primary / secondary hierarchy</h4><p>Investigate is now primary, Dismiss is secondary with confirmation dialog and 5-second undo snackbar.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">5</div><h4>H-05 · P1 Critical · Step Counter Reconciliation (Task 2)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H05Before.png" alt="H-05 before step counter reconciliation" loading="lazy"></div>
+                <div class="bab"><h4>Step mismatch</h4><p>Header claimed 5 steps, but the flow only showed 4. Users waited for a missing step.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H05After.png" alt="H-05 after step counter reconciliation" loading="lazy"></div>
+                <div class="bab"><h4>5-step flow reconciled</h4><p>Added “Validate Data Sources” and updated all labels and progress states to 5 segments.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">6</div><h4>H-06 · P2 Medium · Confidence Score Breakdown (Task 2)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H06Before.png" alt="H-06 before confidence score breakdown" loading="lazy"></div>
+                <div class="bab"><h4>Orphan confidence donut</h4><p>82% confidence had no explanation of contributing factors or source data.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H06After.png" alt="H-06 after confidence score breakdown" loading="lazy"></div>
+                <div class="bab"><h4>Expandable explanation</h4><p>Added info panel with freshness, coverage, and pattern match scores plus cited sources.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">7</div><h4>H-07 · P2 Medium · Causality Banner Hierarchy (Task 2)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H07Before.png" alt="H-07 before causality banner hierarchy" loading="lazy"></div>
+                <div class="bab"><h4>Weak visual hierarchy</h4><p>Causality analysis was styled like small italic text and contained a typo.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H07After.png" alt="H-07 after causality banner hierarchy" loading="lazy"></div>
+                <div class="bab"><h4>Banner promoted</h4><p>Bold text, accent border, typo fixed, and hierarchy made the finding visually lead the screen.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">8</div><h4>H-09 · P2 Medium · Priority Field Pill Selector (Task 3)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H09Before.png" alt="H-09 before priority field pill selector" loading="lazy"></div>
+                <div class="bab"><h4>Broken dropdown</h4><p>Priority rendered as “e igh,” introducing ambiguity in severity selection.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H09After.png" alt="H-09 after priority field pill selector" loading="lazy"></div>
+                <div class="bab"><h4>Color-coded pills</h4><p>Critical, High, Medium, and Low pills replace the dropdown and default from alert severity.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">9</div><h4>H-10 · P2 Medium · Jira Deep-Link Button (Task 3)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H10Before.png" alt="H-10 before Jira deep-link button" loading="lazy"></div>
+                <div class="bab"><h4>Success screen lacked next step</h4><p>Users had a Jira ID but no way to open ticket details directly.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H10After.png" alt="H-10 after Jira deep-link button" loading="lazy"></div>
+                <div class="bab"><h4>Open in Jira</h4><p>Added deep-link and standardized bottom-nav label to align across screens.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">10</div><h4>H-11 · P3 Low · Assignee Match Explanation (Task 3)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H11Before.png" alt="H-11 before assignee match explanation" loading="lazy"></div>
+                <div class="bab"><h4>% match without reason</h4><p>Recommended assignees showed match scores without explaining the basis for the calculation.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H11After.png" alt="H-11 after assignee match explanation" loading="lazy"></div>
+                <div class="bab"><h4>Tooltip added</h4><p>Each candidate now explains specialty, workload, and similar-ticket history.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">11</div><h4>H-12 · P1 Critical · Report 3-Step Flow (Task 5)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H12Before.png" alt="H-12 before report flow" loading="lazy"></div>
+                <div class="bab"><h4>Single-button send</h4><p>Generate & Send skipped preview and allowed AI errors to reach stakeholders immediately.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H12After1.png" alt="H-12 after report flow preview 1" loading="lazy"></div>
+                <div class="bab"><h4>Generate → Preview → Send</h4><p>Single-button path deleted; preview is mandatory and cannot be skipped.</p></div>
+              </div>
+            </div>
+            <div class="bap" style="margin-top:1rem">
+              <div class="bac after" style="grid-column:1/-1">
+                <div class="bat">After — Alternate Preview State</div>
+                <div class="bai"><img src="../../website_images/H12After2.png" alt="H-12 after report flow preview 2" loading="lazy"></div>
+                <div class="bab"><h4>Preview required indicator</h4><p>Alternate post-preview state reinforces that users must review before sending.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">12</div><h4>H-13 · P2 Medium · Platform-Specific Sharing Preview (Task 5)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H13Before.png" alt="H-13 before platform specific sharing preview" loading="lazy"></div>
+                <div class="bab"><h4>One message for all platforms</h4><p>Slack, Teams, Email, and Jira used the same format even though conventions differ.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H13After.png" alt="H-13 after platform specific sharing preview" loading="lazy"></div>
+                <div class="bab"><h4>Platform-specific tabs</h4><p>Users can preview platform-tailored content before continuing to share.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tc">
+            <div class="th"><div class="tn">13</div><h4>H-14 · P1 Critical · Jira Label Rendering Bug (Task 5)</h4></div>
+            <div class="bap">
+              <div class="bac before">
+                <div class="bat">Before</div>
+                <div class="bai"><img src="../../website_images/H14Before.png" alt="H-14 before Jira label rendering bug" loading="lazy"></div>
+                <div class="bab"><h4>Hidden Jira label</h4><p>“oira” label made the destination unreadable because the J was obscured by the icon.</p></div>
+              </div>
+              <div class="bac after">
+                <div class="bat">After</div>
+                <div class="bai"><img src="../../website_images/H14After.png" alt="H-14 after Jira label rendering bug" loading="lazy"></div>
+                <div class="bab"><h4>Tile width fixed</h4><p>Jira label now reads clearly and the same audit pattern was applied across all destination tiles.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1.4rem">
+          <h4>Key Insights</h4>
+          <p><strong>AI vs Self-Assessment:</strong> AI-assisted evaluation caught cross-screen consistency bugs (H-14 'oira' label, H-12 contradictory flows, H-05 step mismatch) impossible to spot manually. Self-assessment caught interaction-level risks (H-04 dismiss without undo, H-09 rubber-stamp risk, H-10 missing deep-link) only visible under simulated task pressure. Neither method alone captured the full 14-issue picture—together they produced a comprehensive evaluation.</p>
+          <p style="margin-top:.55rem"><strong>P1 Critical (4 issues fixed before testing):</strong> H-04, H-05, H-12, H-14</p>
+          <p style="margin-top:.55rem"><strong>P2 Medium (8 issues, Sprint 2):</strong> H-01, H-03, H-06, H-07, H-09, H-10, H-13, H-08</p>
+          <p style="margin-top:.55rem"><strong>P3 Low (2 issues, backlog):</strong> H-02, H-11</p>
+        </div>
     </div>
   </div>
 </section>
